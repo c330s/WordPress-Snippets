@@ -8,8 +8,8 @@
 // returns:         string (link HTML)
 //                  On error return HTML-Comment with error message.
 
-function make_anchor_from_url( $url_full, $new_tab = false ) {
-    if( validate_url( $url_full ) ) {
+function mby_make_anchor_from_url( $url_full, $new_tab = false ) {
+    if( mby_validate_url( $url_full ) ) {
         // remove protocol
         $url_short = preg_replace('/^(https?\:\/\/)(.*?)(\/?)$/', '\2', $url_full );
         $target = '';
@@ -28,7 +28,7 @@ function make_anchor_from_url( $url_full, $new_tab = false ) {
 // arguments:       string    $url
 // returns:         true, if url is valid
 
-function validate_url( $url ) {
+function mby_validate_url( $url ) {
     $regex  = "(https?\:\/\/)?"; // SCHEME 
     $regex .= "([a-z0-9+!*(),;?&=\$_.-]+(\:[a-z0-9+!*(),;?&=\$_.-]+)?@)?"; // User and Pass 
     $regex .= "([a-z0-9-.]*)\.([a-z]{2,64})"; // Host or IP 
