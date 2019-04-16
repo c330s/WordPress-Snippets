@@ -1,4 +1,5 @@
 <?php
+// tested with: WP 5.1.1
 
 // $file_url is the full url
 function get_file_size_from_full_url( $full_url ) {
